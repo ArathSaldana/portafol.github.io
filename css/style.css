@@ -1,0 +1,799 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #1a4b2d;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#scroll-to-top:hover {
+  background-color: #333;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 100px;
+}
+
+.menu .logo {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  margin-right: 120px;
+  text-decoration: none;
+}
+
+.menu-red {
+  transform: translate(10%);
+ 
+  color: white;
+  font-size: 30px;
+  padding: 30px;
+}
+
+.menu-red i {
+  padding-left: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.menu-red a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 0px;
+}
+
+.menu-list {
+  margin-right: 55px;
+  list-style: none;
+  padding: 20px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.menu-list li {
+  padding-left: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  cursor: pointer;
+  width: auto;
+  transition: font-size 0.8s;
+}
+
+.menu-list li:hover {
+  color: rgb(23, 156, 150);
+  font-size: 18px;
+  width: auto;
+}
+
+.menu-list a {
+  text-decoration: none;
+}
+
+.menu-red a:hover .fa-github {
+  color: black;
+}
+
+.menu-red a:hover .fa-linkedin {
+  color: rgb(22, 136, 212);
+}
+.menu-red a:hover .fa-envelope{
+  color: rgb(226, 194, 11);
+}
+.menu-red a:hover .fa-whatsapp {
+  color:  #44b125;
+}
+
+.fondo {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(6px);
+}
+
+.fondo h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+}
+
+.fondo h1 strong {
+  display: block;
+  margin-top: 40px;
+  overflow: hidden;
+  color: rgb(131, 196, 106);
+  animation: typewriter 2s steps(12) infinite;
+  white-space: nowrap;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.fondo a {
+  position: absolute;
+  text-decoration: none;
+  color: aliceblue;
+  bottom: 80px;
+  border: 1px solid aliceblue;
+  border-radius: 10%;
+  padding: 10px 20px;
+}
+
+.fondo a:hover {
+  color: rgb(66, 204, 96);
+}
+
+.fondo .rostro {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform: translate(0%, -50%);
+  border-radius: 20%;
+  filter: grayscale();
+}
+/*-----------sobre mi--------------*/
+.about {
+  background-color: #000000;
+  display: grid;
+  top: 10px;
+  margin-bottom: 0px;
+  margin-top: -30px;
+}
+
+.titulo {
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+  font: 100;
+}
+
+.content-about {
+  display: flex;
+}
+
+.sobre {
+  width: 50%;
+  align-items: center;
+  margin: 20px;
+}
+
+.sobre p {
+  margin-top: 30px;
+  margin-right: 30px;
+  text-align: center;
+  text-overflow: clip;
+  color: wheat;
+}
+
+.imagenes {
+  width: 50%;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+.imagenes img {
+  margin-top: 30px;
+  padding: 1px;
+  width: 130px;
+  height: 75px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/*-----------experiencia-----------*/
+.linea_carrera {
+  margin-top: 30px;
+  padding: 60px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.experiencia {
+  display: flex;
+  align-items: center;
+}
+
+.experiencia h1 {
+  color: rgb(117, 155, 122);
+}
+
+.experiencia_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.imagen-exp {
+  margin-top: 30px;
+  align-items: center;
+}
+
+.imagen-exp img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.experiencia_item h2 {
+  color: white;
+  padding: 2vw;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.experiencia_item p {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.con-linea {
+  position: relative;
+}
+
+.con-linea:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: gray;
+}
+
+/*----------proyectos-----------*/
+
+#Proyect {
+  background-color: #1b1a1a;
+  margin-top: -70px;
+}
+.portafolio p {
+  color: white;
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.portafolio strong {
+  color: aqua;
+}
+.port-ti {
+  margin: 0px;
+  color: white;
+  text-align: center;
+}
+.port {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px;
+}
+
+
+/*------portafolio-carta------*/
+.carta {
+  position: relative;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 270px;
+  height: 300px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: -8px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -8px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -8px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  margin-bottom: 90px;
+}
+
+.carta:hover {
+  border-color: #4b8662; /* Cambia el color del borde al hacer hover */
+  box-shadow: -8px 10px 10px 0px rgba(0, 0, 0, 0.9); /* Cambia la sombra al hacer hover */
+}
+
+.carta:hover h1 {
+  color: #4b8662; /* Cambia el color del título al hacer hover */
+}
+
+.carta:hover .description p {
+  color: #4b8662; /* Cambia el color del párrafo al hacer hover */
+}
+
+.carta:hover .iconos i {
+  color: #4b8662; /* Cambia el color de los iconos al hacer hover */
+}
+
+.carta:hover a {
+  border-color: #4b8662; /* Cambia el color del borde del enlace al hacer hover */
+  color: #4b8662; /* Cambia el color del enlace al hacer hover */
+}
+
+.carta .blurry-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.carta.proyecto1 .blurry-bg {
+  background-image: url('../img/port1.png'); 
+}
+
+.carta.proyecto2 .blurry-bg {
+  background-image: url('../img/geoser.png'); 
+}
+
+.carta.proyecto3 .blurry-bg {
+  background-image: url('../img/RENIEC.png'); 
+}
+.carta.proyecto4 .blurry-bg {
+  background-image: url('../img/BBVA.png'); 
+}
+.carta.proyecto5 .blurry-bg {
+  background-image: url('../img/petsl.png'); 
+}
+.carta.proyecto6 .blurry-bg {
+  background-image: url('../img/py.webp'); 
+}
+.carta.proyecto7 .blurry-bg {
+  background-image: url('../img/tec.avif'); 
+}
+
+
+.carta .iconos {
+  position: absolute;
+  bottom: 40px;
+  left: 45%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-left: 100px;
+  justify-content: center;
+  z-index:1;
+}
+
+.carta .iconos i {
+  margin: 20px 1px;
+  margin-top: 200px;
+}
+.carta .iconos .github{
+  margin-bottom: 20px;
+}
+
+.carta a {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  background-color: #000000;
+  transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  border: 2px solid #000000;
+  text-decoration: none;
+  color: rgb(160, 204, 160);
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 2;
+}
+.carta .iconos a {
+  margin-top: 10px;
+  width: 80px;
+  height: 25px;
+}
+.carta .iconos a {
+  margin-top: 10px;
+  width: 80px;
+  height: 25px;
+}
+
+.carta h1 {
+  transform: translateY(3em);
+  color: rgb(164, 202, 164);
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  background-color: black;
+  padding: 10px;
+}
+/*------------footer------------*/
+footer {
+  background-color: #020202;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #999999;
+}
+/*-----------habilidades----------- */
+#skill {
+  text-align: center;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.slide-track {
+  display: flex;
+  animation: slide infinite 30s linear;
+}
+
+.slide {
+  flex: 0 0 250px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/*--------------media---------------*/
+@media screen and (max-width: 768px) {
+  .menu {
+    height: 80px;
+  }
+
+  .menu .logo {
+    margin-left: 40px;
+    font-size: 30px;
+  }
+
+  .menu-red {
+    transform: translate(0%);
+  }
+
+  .menu-red i {
+    margin-left: 20px;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .fondo h1 {
+    font-size: 35px;
+  }
+
+  .content {
+    margin: 50px auto;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  .content h2 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  /* Estilos para dispositivos móviles */
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Ajustes en el menú */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  
+  .menu .logo {
+    margin-left: 0;
+  }
+  
+  .menu-red {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .menu-list {
+    margin-right: 0;
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .menu-list li {
+    padding: 0;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  /* Ajustes en la sección de fondo */
+  .fondo h1 {
+    font-size: 30px;
+  }
+  
+  /* Ajustes en la sección "Acerca de mí" */
+  .about {
+    padding: 30px 0;
+  }
+  
+  .sobre,
+  .imagenes {
+    width: 100%;
+  }
+  
+  .imagenes img {
+    width: 100px;
+    height: 60px;
+  }
+  
+  /* Ajustes en la sección de experiencia */
+  .linea_carrera {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .experiencia_item {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .imagen-exp img {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+  
+  /* Ajustes en la sección de portafolio */
+  .port {
+    margin: 20px;
+    justify-content: center;
+  }
+  
+  .carta {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding: 10px; /* Añadir un espacio interno a la carta */
+  }
+  
+  .carta:hover h1 {
+    font-size: 20px;
+    margin-top: 15px; /* Subir el título de la carta */
+  }
+  
+  .sobre {
+    text-align: center; /* Centrar el párrafo */
+  }
+  
+  .imagenes {
+    display: none; /* Ocultar las imágenes */
+  }
+  
+  .imagenes img:nth-child(-n+3) {
+    display: block; /* Mostrar solo las primeras 3 imágenes */
+  }
+  
+  .carta .iconos {
+    position: static;
+    transform: none;
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
+  
+  .carta .iconos i {
+    margin: 10px;
+  }
+  
+  .carta a {
+    display: none; /* Ocultar el botón "ir" */
+  }
+  
+  /* Ajustes en el párrafo del portafolio */
+  .portafolio p {
+    text-align: center;
+    margin: 0 20px; /* Centrar el párrafo y ajustar los márgenes laterales */
+  }
+}
+
+@media only screen and (min-width: 323px) and (max-width: 800px) {
+  /* Estilos para dispositivos móviles */
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Ajustes en el menú */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  
+  .menu .logo {
+    margin-left: 30px;
+  }
+  
+  .menu-red {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .menu-list {
+    margin-right: 0;
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .menu-list li {
+    padding: 0;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  /* Ajustes en la sección de fondo */
+  .fondo h1 {
+    font-size: 30px;
+  }
+  
+  /* Ajustes en la sección "Acerca de mí" */
+  .about {
+    padding: 30px 0;
+  }
+  
+  .sobre,
+  .imagenes {
+    width: 100%;
+  }
+  
+  .imagenes img {
+    width: 100px;
+    height: 60px;
+  }
+  
+  /* Ajustes en la sección de experiencia */
+  .linea_carrera {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .experiencia_item {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .imagen-exp img {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+  
+  /* Ajustes en la sección de portafolio */
+  .port {
+    margin: 20px;
+    justify-content: center;
+  }
+  
+  .carta {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding: 10px; /* Añadir un espacio interno a la carta */
+  }
+  
+  .carta:hover h1 {
+    font-size: 20px;
+    margin-top: 15px; /* Subir el título de la carta */
+  }
+  
+  .carta .iconos {
+    position: static;
+    transform: none;
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
+  
+  .carta .iconos i {
+    margin: 10px;
+  }
+  
+  .carta a {
+    display: none; /* Ocultar el botón "ir" */
+  }
+  
+  /* Ajustes en el párrafo del portafolio */
+  .portafolio p {
+    text-align: center;
+    margin: 0 20px; /* Centrar el párrafo y ajustar los márgenes laterales */
+  }
+}
+
+
+
